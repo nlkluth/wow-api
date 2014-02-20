@@ -17,11 +17,11 @@ services.factory('Realms', ['$http', function($http) {
 
   return {
     status: function() {
-      return load('/realms');
+      return load('api/realms');
     },
 
     information: function(realm) {
-      return load('/realms?realms=' + realm);
+      return load('api/realms?realms=' + realm);
     }
   };
 }]);
