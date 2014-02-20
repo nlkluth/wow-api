@@ -75,7 +75,7 @@ module.exports = function (grunt) {
       },
       proxies: [
         {
-          context: '/realms',
+          context: '/api',
           host: 'localhost',
           port: 3000,
           changeOrigin: false,
