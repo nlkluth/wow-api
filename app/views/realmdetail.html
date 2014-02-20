@@ -3,30 +3,31 @@
 
   <div class="row">
     <div class="col-xs-6">
-      <div class="row">
-        <div class="col-xs-2">{{realm.type}}</div>
-        <div class="col-xs-2">{{realm.population}}</div>
-        <div class="col-xs-2">{{realm.queue}}</div>
+      <div class="row information">
+        <div class="col-xs-3">Type: {{realm.type}}</div>
+        <div class="col-xs-3">Population: {{realm.population}}</div>
+        <div class="col-xs-3">Battlegroup:{{realm.battlegroup}}</div>
       </div>
+
       <div class="row">
-        <div class="col-xs-2">{{realm.status}}</div>
-        <div class="col-xs-2">{{realm.battlegroup}}</div>
-        <div class="col-xs-2">{{realm.timezone}}</div>
+        <div class="col-xs-3">Queue: {{realm.queue}}</div>
+        <div class="col-xs-3">Status: {{realm.status}}</div>
+        <div class="col-xs-3">Timezone: {{realm.timezone}}</div>
       </div>
     </div>
 
     <div class="col-xs-3">
       <h4> Wintergrasp </h4>
-      {{realm.wintergrasp.controlling-faction}}
-      {{realm.wintergrasp.status}}
-      {{realm.wintergrasp.next}}
+        <div class="col-xs-1">{{realm.wintergrasp.controlling-faction}}</div>
+        <div class="col-xs-1">{{realm.wintergrasp.status}}</div>
+        <div class="col-xs-1">{{realm.wintergrasp.next}}</div>
     </div>
 
     <div class="col-xs-3">
       <h4> Tol-Barad </h4>
-      {{realm.tol-barad.controlling-faction}}
-      {{realm.tol-barad.status}}
-      {{realm.tol-barad.next}}
+      <div class="col-xs-1">{{realm.tol-barad.controlling-faction}}</div>
+      <div class="col-xs-1">{{realm.tol-barad.status}}</div>
+      <div class="col-xs-1">{{realm.tol-barad.next}}</div>
     </div>
   </div>
 </div>
