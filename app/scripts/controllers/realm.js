@@ -17,7 +17,7 @@ controllers.controller('RealmController', ['$scope', 'Realms', function($scope, 
   };
 
   $scope.searchsize = {
-    'limit': 10
+    'limit': 50
   };
 
   $scope.strictsearch = {};
