@@ -1,0 +1,18 @@
+<div class="container" ng-controller="PvPController">
+  <h1> PvP </h1>
+  <div ng-repeat="player in leaderboard">
+    {{player.ranking}}
+    {{player.rating}}
+    {{player.name}}
+    {{player.realmName}}
+    {{player.raceId}}
+    {{player.classId}}
+    {{player.specId}}
+    {{player.factionId}}
+    {{player.genderId}}
+    {{player.seasonWins}}
+    {{player.seasonLosses}}
+    {{player.weeklyWins}}
+    {{player.weeklyLosses}}
+  </div>
+</div>
