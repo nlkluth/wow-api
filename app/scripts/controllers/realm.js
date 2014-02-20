@@ -8,4 +8,17 @@ controllers.controller('RealmController', ['$scope', 'Realms', function($scope, 
   }, function(error) {
     console.log(error, 'error');
   });
+
+  $scope.types = {
+    'PvP': 'pvp',
+    'PvE': 'pve',
+    'rpPvP': 'rppvp',
+    'rpPvE': 'rppve'
+  };
+
+  $scope.searchsize = {
+    'limit': 10
+  };
+
+  $scope.strictsearch = {};
 }]);
