@@ -1,0 +1,23 @@
+{
+  "name": "Versed-Backend",
+  "version": "0.0.1",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "debug": "DEBUG=shim:* node-dev index.js"
+  },
+  "author": "Nathan Kluth",
+  "dependencies": {
+    "cheerio": "~0.13.1",
+    "lodash": "~2.4.1",
+    "debug": "~0.7.4",
+    "express": "~3.4.8"
+  },
+  "bundledDependencies": [],
+  "devDependencies": {
+    "request": "~2.34.0"
+  }
+}
