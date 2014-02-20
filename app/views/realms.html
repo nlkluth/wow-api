@@ -13,11 +13,13 @@
   </div>
 
   <div ng-repeat="realm in realms" class="row realm">
-    <div class="col-xs-2">{{realm.name}}</div>
-    <div class="col-xs-2">{{realm.population}}</div>
-    <div class="col-xs-2">{{realm.queue}}</div>
-    <div class="col-xs-2">{{realm.type}}</div>
-    <div class="col-xs-2">{{realm.battlegroup}}</div>
-    <div class="col-xs-2">{{realm.status}}</div>
+    <a ng-href="#/realm/{{realm.name}}">
+        <div class="col-xs-2">{{realm.name}}</div>
+      <div class="col-xs-2">{{realm.population}}</div>
+      <div class="col-xs-2">{{realm.queue}}</div>
+      <div class="col-xs-2">{{realm.type}}</div>
+      <div class="col-xs-2">{{realm.battlegroup}}</div>
+      <div class="col-xs-2">{{realm.status}}</div>
+    </a>
   </div>
 </div>
