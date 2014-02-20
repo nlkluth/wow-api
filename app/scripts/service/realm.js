@@ -3,7 +3,7 @@
 var services = angular.module('wow.services.realms', []);
 
 services.factory('Realms', ['$http', function($http) {
-  function load (path) {
+  function load(path) {
     var request = $http({
       method: 'GET',
       url: path,
@@ -16,8 +16,12 @@ services.factory('Realms', ['$http', function($http) {
   }
 
   return {
-    status: function () {
+    status: function() {
       return load('/realms');
+    },
+
+    information: function(realm) {
+      return load('/realms?realms=' + realm);
     }
   };
 }]);
