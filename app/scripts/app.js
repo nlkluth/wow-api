@@ -8,13 +8,16 @@ var app = angular.module('wow', [
   'ngRoute',
   'wow.controller.nav',
   'wow.controller.realm',
-  'wow.controller.realm',
+  'wow.controller.realmdetail',
 ]);
 
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/realms.html',
+      })
+      .when('/realm/:name', {
+        templateUrl: 'views/realmdetail.html'
       })
       .otherwise({
         redirectTo: '/'
