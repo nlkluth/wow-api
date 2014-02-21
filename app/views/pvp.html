@@ -1,18 +1,20 @@
 <div class="container" ng-controller="PvPController">
   <h1> PvP </h1>
-  <div ng-repeat="player in leaderboard">
-    {{player.ranking}}
-    {{player.rating}}
-    {{player.name}}
-    {{player.realmName}}
-    {{player.raceId}}
-    {{player.classId}}
-    {{player.specId}}
-    {{player.factionId}}
-    {{player.genderId}}
-    {{player.seasonWins}}
-    {{player.seasonLosses}}
-    {{player.weeklyWins}}
-    {{player.weeklyLosses}}
+  <div ng-repeat="character in leaderboard">
+    <div class="row">
+      <a ng-href="#/character/{{character.realmName}}/{{character.name}}">
+        <div class="col-xs-1">{{character.ranking}}</div>
+        <div class="col-xs-1">{{character.rating}}</div>
+        <div class="col-xs-1">{{character.name}}</div>
+        <div class="col-xs-1">{{character.realmName}}</div>
+        <div class="col-xs-1">{{character.raceId}} {{character.classId}} {{character.genderId}}</div>
+        <div class="col-xs-1">{{character.specId}}</div>
+        <div class="col-xs-1">{{character.factionId}}</div>
+        <div class="col-xs-1">{{character.seasonWins}}</div>
+        <div class="col-xs-1">{{character.seasonLosses}}</div>
+        <div class="col-xs-1">{{character.weeklyWins}}</div>
+        <div class="col-xs-1">{{character.weeklyLosses}}</div>
+      </div>
+    </row>
   </div>
 </div>
