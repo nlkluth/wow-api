@@ -9,10 +9,11 @@ var port = process.env.PORT || 3000;
 
 /** Routing **/
 var realms = require('./lib/realms'),
-  pvp = require('./lib/pvp');
+  character = require('./lib/character');
 
 api.get('/api/realms', realms.list);
-api.get('/api/pvp/:bracket', pvp.list);
+api.get('/api/pvp/:bracket', character.list);
+api.get('/api/character/:realm/:name', character.detail);
 
 api.listen(port);
 debug('Listening on %d', port);
