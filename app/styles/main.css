@@ -27,3 +27,19 @@ select {
 .information {
   margin-bottom: 30px;
 }
+
+.BOSSKILL {
+  background: #fea23d;
+}
+
+.LOOT {
+  background: #4aeea4;
+}
+
+.CRITERIA {
+  background: #b3ad8a;
+}
+
+.ACHIEVEMENT {
+  background: #eaebae;
+}
