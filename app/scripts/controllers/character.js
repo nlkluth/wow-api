@@ -26,8 +26,8 @@ controllers.controller('CharacterController', ['$scope', '$routeParams', 'Charac
       $scope.mounts = result.data.mounts.collected;
       $scope.pets = result.data.pets.collected;
       $scope.professions = result.data.professions;
-      $scope.progression = result.data.progression;
-      $scope.pvp = result.data.pvp;
+      $scope.progression = result.data.progression.raids;
+      $scope.pvp = result.data.pvp.brackets;
       $scope.quests = result.data.quests;
       $scope.stats = result.data.stats;
       $scope.talents = result.data.talents;
