@@ -10,7 +10,6 @@ controllers.controller('CharacterController', ['$scope', '$routeParams', 'Charac
     };
 
     Character.info($scope.character.realm, $scope.character.name).then(function(result) {
-      $scope.character.achievementsCompleted = result.data.achievements.achievementsCompleted;
       $scope.character.achievements = result.data.achievementPoints;
       $scope.character.battlegroup = result.data.battlegroup;
       $scope.character.class = result.data.class;
@@ -20,6 +19,7 @@ controllers.controller('CharacterController', ['$scope', '$routeParams', 'Charac
       $scope.character.thumbnail = result.data.thumbnail;
       $scope.character.totalHonerableKills = result.data.totalHonerableKills;
 
+      $scope.achievementsCompleted = result.data.achievements.achievementsCompleted;
       $scope.feed = result.data.feed;
       $scope.guild = result.data.guild;
       $scope.items = result.data.items;
