@@ -7,10 +7,64 @@
         <div class="col-xs-4">{{character.thumbnail}}</div>
       </div>
       <div class="row">
-        <div class="col-xs-3">{{character.achievements}}</div>
-        <div class="col-xs-3">{{character.totalHonerableKills}}</div>
-        <div class="col-xs-3">{{character.realm}}</div>
-        <div class="col-xs-3">{{character.battlegroup}}</div>
+        <div class="col-xs-2">{{character.achievements}}</div>
+        <div class="col-xs-2">{{character.totalHonerableKills}}</div>
+        <div class="col-xs-2">{{character.realm}}</div>
+        <div class="col-xs-2">{{character.battlegroup}}</div>
+        <div class="col-xs-2">{{guild.name}}</div>
+        <div class="col-xs-2">{{guild.level}}</div>
+        <!-- {{guild.emblem}} -->
+      </div>
+      <div class="row">
+        <h3> Stats </h3>
+        <div class="col-xs-3" ng-repeat="(key, value) in stats">
+          <div>{{key}} {{value}}</div>
+        </div>
+      </div>
+      <div class="row">
+        <h3> Items </h3>
+        <div>{{items.averageItemLevel}}</div>
+
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="col-xs-12">{{items.head.name}} <!-- {{id, icon, quality, itemLevel, tooltipParams, regorge, stats, armor}} --></div>
+            <div class="col-xs-12">{{items.shoulder.name}}</div>
+            <div class="col-xs-12">{{items.back.name}}</div>
+            <div class="col-xs-12">{{items.chest.name}}</div>
+            <div class="col-xs-12">{{items.waist.name}}</div>
+            <div class="col-xs-12">{{items.legs.name}}</div>
+            <div class="col-xs-12">{{items.feet.name}}</div>
+          </div>
+          <div class="col-xs-6">
+            <div class="col-xs-12">{{items.hands.name}}</div>
+            <div class="col-xs-12">{{items.finger1.name}}</div>
+            <div class="col-xs-12">{{items.finger2.name}}</div>
+            <div class="col-xs-12">{{items.neck.name}}</div>
+            <div class="col-xs-12">{{items.shirt.name}}</div>
+            <div class="col-xs-12">{{items.tabard.name}}</div>
+            <div class="col-xs-12">{{items.trinket1.name}}</div>
+            <div class="col-xs-12">{{items.trinket2.name}}</div>
+            <div class="col-xs-12">{{items.wrist.name}}</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6">{{items.mainHand.name}}</div>
+          <div class="col-xs-6">{{items.offhand.name}}</div>
+        </div>
+      </div>
+      <div class="row">
+        <h3> talents </h3> {{talents}}
+      </div>
+      <div class="row">
+        <h3> mounts </h3> {{mounts}}
+        <h3> pets </h3> {{pets}}
+      </div>
+      <div class="row">
+        <h3> professions </h3> {{professions}}
+      </div>
+      <div class="row">
+        <h3> pvp </h3> {{pvp}}
+        <h3> quests </h3> {{quests}}
       </div>
     </div>
 
@@ -21,26 +75,8 @@
         <!-- <div class="col-xs-4">LINK: {{event.achievement.id}}</div> -->
       </div>
     </div>
+    <div class="row">
+       <h3> progression </h3> {{progression}}
+     </div>
   </div>
-
-  <h3> guild </h3> {{guild}}
-
-  <h3> items </h3> {{items}}
-
-  <h3> mounts </h3> {{mounts}}
-
-  <h3> pets </h3> {{pets}}
-
-  <h3> professions </h3> {{professions}}
-
-  <h3> progression </h3> {{progression}}
-
-  <h3> pvp </h3> {{pvp}}
-
-  <h3> quests </h3> {{quests}}
-
-  <h3> stats </h3> {{stats}}
-
-  <h3> talents </h3> {{talents}}
-
 </div>
