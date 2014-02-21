@@ -1,10 +1,27 @@
-<div ng-controller="CharacterController">
-  {{name}}
-  {{realm}}
+<div ng-controller="CharacterController" class="container">
+  <div class="row">
+    <div class="col-xs-8">
+      <div class="row">
+        <div class="col-xs-4">{{character.name}}</div>
+        <div class="col-xs-4">{{character.level}} {{character.gender}} {{character.race}} {{character.class}} </div>
+        <div class="col-xs-4">{{character.thumbnail}}</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">{{character.achievements}}</div>
+        <div class="col-xs-3">{{character.totalHonerableKills}}</div>
+        <div class="col-xs-3">{{character.realm}}</div>
+        <div class="col-xs-3">{{character.battlegroup}}</div>
+      </div>
+    </div>
 
-  <h3> Characther </h3>{{character}}
-
-  <h3> Feed </h3> {{feed}}
+    <div class="col-xs-4">
+    <div>
+      <div ng-repeat="event in feed" class="row">
+        <div class="col-xs-12 {{event.type}}">{{event.itemId}} {{event.achievement.title}} {{event.achievement.description}}</div>
+        <!-- <div class="col-xs-4">LINK: {{event.achievement.id}}</div> -->
+      </div>
+    </div>
+  </div>
 
   <h3> guild </h3> {{guild}}
 
