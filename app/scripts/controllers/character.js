@@ -30,7 +30,7 @@ controllers.controller('CharacterController', ['$scope', '$routeParams', 'Charac
       $scope.pvp = result.data.pvp.brackets;
       $scope.quests = result.data.quests;
       $scope.stats = result.data.stats;
-      $scope.talents = result.data.talents;
+      $scope.talents = result.data.talents[0];
     }, function(error) {
       console.log(error, 'error');
     });
