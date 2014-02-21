@@ -10,6 +10,7 @@ var app = angular.module('wow', [
   'wow.controller.realm',
   'wow.controller.realmdetail',
   'wow.controller.pvp',
+  'wow.controller.character'
 ]);
 
 app.config(['$routeProvider', function ($routeProvider) {
@@ -22,6 +23,9 @@ app.config(['$routeProvider', function ($routeProvider) {
       })
       .when('/pvp', {
         templateUrl: 'views/pvp.html'
+      })
+      .when('/character/:realm/:name', {
+        templateUrl: 'views/character.html'
       })
       .otherwise({
         redirectTo: '/'
