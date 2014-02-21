@@ -75,8 +75,27 @@
         <h3> professions </h3> {{professions}}
       </div>
       <div class="row">
-        <h3> pvp </h3> {{pvp}}
-        <h3> quests </h3> {{quests}}
+        <h3> pvp </h3>
+        <div ng-repeat="bracket in pvp">
+          <h4>{{bracket.slug}} {{bracket.rating}}</h4>
+
+          <div class="row">
+            <div class="col-xs-4">{{bracket.weeklyPlayed}}</div>
+            <div class="col-xs-4">{{bracket.weeklyWon}}</div>
+            <div class="col-xs-4">{{bracket.weeklyLost}}</div>
+          </div>
+          <div class="row">
+            <div class="col-xs-4">{{bracket.seasonPlayed}}</div>
+            <div class="col-xs-4">{{bracket.seasonWon}}</div>
+            <div class="col-xs-4">{{bracket.seasonLost}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <h3> quests </h3>
+        <div ng-repeat="quest in quests">
+          <div class="col-xs-1">{{quest}}</div>
+        </div>
       </div>
     </div>
 
@@ -88,7 +107,16 @@
       </div>
     </div>
     <div class="row">
-       <h3> progression </h3> {{progression}}
+       <h3> progression </h3>
+       <div ng-repeat="raid in progression">
+        {{raid.name}}
+        {{raid.id}}
+        <div ng-repeat="boss in raid.bosses">
+          {{boss.name}}
+          {{boss.id}}
+          {{boss.normalKills}}
+        </div>
+      </div>
      </div>
   </div>
 </div>
