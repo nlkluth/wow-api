@@ -24,6 +24,14 @@ select {
           border-radius: 4px;
 }
 
+.realm:hover {
+  background: #ebebeb;
+}
+
+.realm a {
+  color: #000;
+}
+
 .information {
   margin-bottom: 30px;
 }
