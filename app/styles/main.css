@@ -2,11 +2,18 @@ body {
   background: #F3F3F3;
 }
 
-.realm {
+.list {
   padding: 5px 0;
   border-bottom: 1px solid #2c2c2c;
 }
 
+.list:hover {
+  background: #ebebeb;
+}
+
+.list a {
+  color: #000;
+}
 
 select {
   width: 90%;
@@ -22,14 +29,6 @@ select {
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;
-}
-
-.realm:hover {
-  background: #ebebeb;
-}
-
-.realm a {
-  color: #000;
 }
 
 .information {
