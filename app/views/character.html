@@ -3,53 +3,53 @@
     <div class="col-xs-8">
       <div class="row">
         <div class="col-xs-4">{{character.name}}</div>
-        <div class="col-xs-4">{{character.level}} {{character.gender}} {{character.race}} {{character.class}} </div>
-        <div class="col-xs-4">{{character.thumbnail}}</div>
+        <div class="col-xs-4">{{info.level}} {{info.gender}} {{info.race}} {{info.class}} </div>
+        <div class="col-xs-4">{{info.thumbnail}}</div>
       </div>
       <div class="row">
-        <div class="col-xs-2">{{character.achievements}}</div>
-        <div class="col-xs-2">{{character.totalHonerableKills}}</div>
+        <div class="col-xs-2">{{info.achievementPoints}}</div>
+        <div class="col-xs-2">{{info.totalHonorableKills}}</div>
         <div class="col-xs-2">{{character.realm}}</div>
-        <div class="col-xs-2">{{character.battlegroup}}</div>
-        <div class="col-xs-2">{{guild.name}}</div>
-        <div class="col-xs-2">{{guild.level}}</div>
+        <div class="col-xs-2">{{info.battlegroup}}</div>
+        <div class="col-xs-2">{{info.guild.name}}</div>
+        <div class="col-xs-2">{{info.guild.level}}</div>
         <!-- {{guild.emblem}} -->
       </div>
       <div class="row">
         <h3> Stats </h3>
-        <div class="col-xs-3" ng-repeat="(key, value) in stats">
+        <div class="col-xs-3" ng-repeat="(key, value) in info.stats">
           <div>{{key}} {{value}}</div>
         </div>
       </div>
       <div class="row">
         <h3> Items </h3>
-        <div>{{items.averageItemLevel}}</div>
+        <div>{{info.items.averageItemLevel}}</div>
 
         <div class="row">
           <div class="col-xs-6">
-            <div class="col-xs-12">{{items.head.name}} <!-- {{id, icon, quality, itemLevel, tooltipParams, regorge, stats, armor}} --></div>
-            <div class="col-xs-12">{{items.shoulder.name}}</div>
-            <div class="col-xs-12">{{items.back.name}}</div>
-            <div class="col-xs-12">{{items.chest.name}}</div>
-            <div class="col-xs-12">{{items.waist.name}}</div>
-            <div class="col-xs-12">{{items.legs.name}}</div>
-            <div class="col-xs-12">{{items.feet.name}}</div>
+            <div class="col-xs-12">{{info.items.head.name}} <!-- {{id, icon, quality, itemLevel, tooltipParams, regorge, stats, armor}} --></div>
+            <div class="col-xs-12">{{info.items.shoulder.name}}</div>
+            <div class="col-xs-12">{{info.items.back.name}}</div>
+            <div class="col-xs-12">{{info.items.chest.name}}</div>
+            <div class="col-xs-12">{{info.items.waist.name}}</div>
+            <div class="col-xs-12">{{info.items.legs.name}}</div>
+            <div class="col-xs-12">{{info.items.feet.name}}</div>
           </div>
           <div class="col-xs-6">
-            <div class="col-xs-12">{{items.hands.name}}</div>
-            <div class="col-xs-12">{{items.finger1.name}}</div>
-            <div class="col-xs-12">{{items.finger2.name}}</div>
-            <div class="col-xs-12">{{items.neck.name}}</div>
-            <div class="col-xs-12">{{items.shirt.name}}</div>
-            <div class="col-xs-12">{{items.tabard.name}}</div>
-            <div class="col-xs-12">{{items.trinket1.name}}</div>
-            <div class="col-xs-12">{{items.trinket2.name}}</div>
-            <div class="col-xs-12">{{items.wrist.name}}</div>
+            <div class="col-xs-12">{{info.items.hands.name}}</div>
+            <div class="col-xs-12">{{info.items.finger1.name}}</div>
+            <div class="col-xs-12">{{info.items.finger2.name}}</div>
+            <div class="col-xs-12">{{info.items.neck.name}}</div>
+            <div class="col-xs-12">{{info.items.shirt.name}}</div>
+            <div class="col-xs-12">{{info.items.tabard.name}}</div>
+            <div class="col-xs-12">{{info.items.trinket1.name}}</div>
+            <div class="col-xs-12">{{info.items.trinket2.name}}</div>
+            <div class="col-xs-12">{{info.items.wrist.name}}</div>
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-6">{{items.mainHand.name}}</div>
-          <div class="col-xs-6">{{items.offhand.name}}</div>
+          <div class="col-xs-6">{{info.items.mainHand.name}}</div>
+          <div class="col-xs-6">{{info.items.offhand.name}}</div>
         </div>
       </div>
       <div class="row">
@@ -77,21 +77,21 @@
         <h3> mounts </h3>
         <!-- [{"name":"Albino Drake","spellId":60025,"creatureId":32158,"itemId":44178,"qualityId":4,"icon":"ability_mount_drake_blue","isGround":true,"isFlying":true,"isAquatic":true,"isJumping":false},{ -->
         <div class="row">
-          <div class="col-xs-4" ng-repeat="mount in mounts">
+          <div class="col-xs-4" ng-repeat="mount in info.mounts.collected">
             {{mount.name}}
           </div>
         </div>
         <h3> pets </h3>
         <!-- [{"name":"Hewty","spellId":90523,"creatureId":48609,"itemId":64372,"qualityId":3,"icon":"inv_misc_head_clockworkgnome_01","stats":{"speciesId":277,"breedId":11,"petQualityId":3,"level":25,"health":1546,"power":257,"speed":289},"battlePetGuid":"0000000002B43963","isFavorite":true,"isFirstAbilitySlotSelected":false,"isSecondAbilitySlotSelected":false,"isThirdAbilitySlotSelected":false,"creatureName":"Clockwork Gnome","canBattle":true}, -->
         <div class="row">
-          <div class="col-xs-4" ng-repeat="pet in pets">
+          <div class="col-xs-4" ng-repeat="pet in info.pets.collected">
             {{pet.name}}
           </div>
         </div>
       </div>
       <div class="row">
         <h3> professions </h3>
-        <div ng-repeat="profession in professions.primary" class="col-xs-12">
+        <div ng-repeat="profession in info.professions.primary" class="col-xs-12">
           {{profession.name}}
           {{profession.id}}
           {{profession.rank}}
@@ -102,7 +102,7 @@
             </div>
           </div>
         </div>
-        <div ng-repeat="profession in professions.secondary" class="col-xs-12">
+        <div ng-repeat="profession in info.professions.secondary" class="col-xs-12">
           {{profession.name}}
           {{profession.id}}
           {{profession.rank}}
@@ -116,7 +116,7 @@
       </div>
       <div class="row">
         <h3> pvp </h3>
-        <div ng-repeat="bracket in pvp">
+        <div ng-repeat="bracket in info.pvp.brackets">
           <h4>{{bracket.slug}} {{bracket.rating}}</h4>
 
           <div class="row">
@@ -133,7 +133,7 @@
       </div>
       <div class="row">
         <h3> quests </h3>
-        <div ng-repeat="quest in quests">
+        <div ng-repeat="quest in info.quests">
           <div class="col-xs-1">{{quest}}</div>
         </div>
       </div>
@@ -141,14 +141,14 @@
 
     <div class="col-xs-4">
     <div>
-      <div ng-repeat="event in feed" class="row">
+      <div ng-repeat="event in info.feed" class="row">
         <div class="col-xs-12 {{event.type}}">{{event.itemId}} {{event.achievement.title}} {{event.achievement.description}}</div>
         <!-- <div class="col-xs-4">LINK: {{event.achievement.id}}</div> -->
       </div>
     </div>
     <div class="row">
        <h3> progression </h3>
-       <div ng-repeat="raid in progression">
+       <div ng-repeat="raid in info.progression.raids">
         {{raid.name}}
         {{raid.id}}
         <div ng-repeat="boss in raid.bosses">
