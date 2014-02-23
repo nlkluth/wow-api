@@ -20,7 +20,7 @@
     </h4>
   </div>
 
-  <div ng-repeat="realm in realms | filter:search | filter:strictsearch:true | limitTo:searchsize.limit" class="row realm">
+  <div ng-repeat="realm in realms | filter:search | filter:strictsearch:true | limitTo:searchsize.limit" class="row list">
     <a ng-href="#/realm/{{realm.name}}">
         <div class="col-xs-2">{{realm.name}}</div>
       <div class="col-xs-2">{{realm.population}}</div>
