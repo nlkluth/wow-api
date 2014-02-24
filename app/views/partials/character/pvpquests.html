@@ -1,0 +1,28 @@
+<div ng-controller="TabsController">
+  <tabset>
+    <tab heading="PvP">
+      <h3> pvp </h3>
+      <div ng-repeat="bracket in info.pvp.brackets">
+        <h4>{{bracket.slug}} {{bracket.rating}}</h4>
+
+        <div class="row">
+          <div class="col-xs-4">{{bracket.weeklyPlayed}}</div>
+          <div class="col-xs-4">{{bracket.weeklyWon}}</div>
+          <div class="col-xs-4">{{bracket.weeklyLost}}</div>
+        </div>
+        <div class="row">
+          <div class="col-xs-4">{{bracket.seasonPlayed}}</div>
+          <div class="col-xs-4">{{bracket.seasonWon}}</div>
+          <div class="col-xs-4">{{bracket.seasonLost}}</div>
+        </div>
+      </div>
+    </tab>
+
+    <tab heading="Quets">
+      <h3> quests </h3>
+      <div ng-repeat="quest in info.quests">
+        <div class="col-xs-1">{{quest}}</div>
+      </div>
+    </tab>
+  </tabset>
+</div>

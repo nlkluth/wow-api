@@ -1,0 +1,14 @@
+<h3> progression </h3>
+<div ng-repeat="raid in info.progression.raids" class="row raid">
+  <div class="col-xs-6">
+    {{raid.name}}
+    {{raid.id}}
+  </div>
+  <div class="col-xs-6">
+    <div ng-repeat="boss in raid.bosses">
+      {{boss.name}}
+      {{boss.id}}
+      {{boss.normalKills}}
+    </div>
+  </div>
+</div>

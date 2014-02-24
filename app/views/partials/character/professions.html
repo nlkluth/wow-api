@@ -1,0 +1,23 @@
+<h3> professions </h3>
+<div ng-repeat="profession in info.professions.primary" class="col-xs-12">
+  {{profession.name}}
+  {{profession.id}}
+  {{profession.rank}}
+  {{profession.max}}
+  <div class="row">
+    <div ng-repeat="recipe in profession.recipes">
+      <div class="col-xs-1">{{recipe}}</div>
+    </div>
+  </div>
+</div>
+<div ng-repeat="profession in info.professions.secondary" class="col-xs-12">
+  {{profession.name}}
+  {{profession.id}}
+  {{profession.rank}}
+  {{profession.max}}
+  <div class="row">
+    <div ng-repeat="recipe in profession.recipes">
+      <div class="col-xs-1">{{recipe}}</div>
+    </div>
+  </div>
+</div>
