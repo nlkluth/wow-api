@@ -34,7 +34,39 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
       })
       .state('character', {
         url: '/character/:realm/:name',
-        templateUrl: 'views/pvp.html'
+        templateUrl: 'views/character.html'
+      })
+      .state('character.feed', {
+        url: '/feed',
+        templateUrl: 'views/partials/character/feed.html'
+      })
+      .state('character.petsmounts', {
+        url: '/petsmounts',
+        templateUrl: 'views/partials/character/mountspets.html'
+      })
+      .state('character.achievements', {
+        url: '/achievements',
+        templateUrl: 'views/partials/character/achievements.html'
+      })
+      .state('character.professions', {
+        url: '/professions',
+        templateUrl: 'views/partials/character/professions.html'
+      })
+      .state('character.progression', {
+        url: '/progression',
+        templateUrl: 'views/partials/character/progression.html'
+      })
+      .state('character.guild', {
+        url: '/guild',
+        templateUrl: 'views/partials/character/guild.html'
+      })
+      .state('character.pvpquests', {
+        url: '/pvpquests',
+        templateUrl: 'views/partials/character/pvpquests.html'
+      })
+      .state('character.talents', {
+        url: '/talents',
+        templateUrl: 'views/partials/character/talents.html'
       })
       .state('404', {
         url: '/404',
