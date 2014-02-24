@@ -6,11 +6,13 @@ var app = angular.module('wow', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
+  'ui.bootstrap',
   'wow.controller.nav',
   'wow.controller.realm',
   'wow.controller.realmdetail',
   'wow.controller.pvp',
-  'wow.controller.character'
+  'wow.controller.character',
+  'wow.controller.tabs'
 ]);
 
 app.config(['$routeProvider', function ($routeProvider) {
