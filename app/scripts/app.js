@@ -16,22 +16,29 @@ var app = angular.module('wow', [
   'wow.controller.tabs'
 ]);
 
-app.config(['$routeProvider', function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/realms.html',
+app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise('/404');
+
+    $stateProvider
+      .state('realms', {
+        url: '/',
+        templateUrl: 'views/realms.html'
       })
-      .when('/realm/:name', {
+      .state('realm detail', {
+        url: '/realm/:name',
         templateUrl: 'views/realmdetail.html'
       })
-      .when('/pvp', {
+      .state('pvp list', {
+        url: '/pvp',
         templateUrl: 'views/pvp.html'
       })
-      .when('/character/:realm/:name', {
-        templateUrl: 'views/character.html'
+      .state('character', {
+        url: '/character/:realm/:name',
+        templateUrl: 'views/pvp.html'
       })
-      .otherwise({
-        redirectTo: '/'
+      .state('404', {
+        url: '/404',
+        templateUrl: '404.html'
       });
   }]);
 
