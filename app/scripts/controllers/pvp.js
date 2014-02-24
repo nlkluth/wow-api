@@ -2,8 +2,8 @@
 
 var controllers = angular.module('wow.controller.pvp', ['wow.services.pvp']);
 
-controllers.controller('PvPController', ['$scope', '$routeParams', 'PvP',
-  function($scope, $routeParams, PvP) {
+controllers.controller('PvPController', ['$scope', '$stateParams', 'PvP',
+  function($scope, $stateParams, PvP) {
     $scope.bracket = '3v3';
 
     PvP.list($scope.bracket).then(function(result) {

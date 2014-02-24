@@ -2,12 +2,14 @@
 
 var controllers = angular.module('wow.controller.character', ['wow.services.character']);
 
-controllers.controller('CharacterController', ['$scope', '$routeParams', 'Character',
-  function($scope, $routeParams, Character) {
+controllers.controller('CharacterController', ['$scope', '$stateParams', 'Character',
+  function($scope, $stateParams, Character) {
     $scope.character = {
-      name: $routeParams.name,
-      realm: $routeParams.realm
+      name: $stateParams.name,
+      realm: $stateParams.realm
     };
+
+    console.log($stateParams);
 
     Character.info($scope.character.realm, $scope.character.name).then(function(result) {
       console.log(result.data);
