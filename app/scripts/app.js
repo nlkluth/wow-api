@@ -7,6 +7,7 @@ var app = angular.module('wow', [
   'ngSanitize',
   'ngRoute',
   'ui.bootstrap',
+  'ui.router',
   'wow.controller.nav',
   'wow.controller.realm',
   'wow.controller.realmdetail',
