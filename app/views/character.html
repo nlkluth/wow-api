@@ -54,17 +54,34 @@
       </div>
       <div class="row">
         <h3> talents </h3>
-        {{talents.glyphs.major}}
-        {{talents.glyphcs.minor}}
-        {{talents.spec.name}}
-        {{talents.spec.description}}
-        <div ng-repeat="talent in talents.talents">
-          {{talent.spell.name}}
-          {{talent.spell.id}}
-          {{talent.spell.description}}
-          {{talent.spell.casTtime}}
-          {{talent.spell.cooldown}}
-        </div>
+        <tabset>
+          <tab heading="First">
+            {{info.talents[0].glyphs.major}}
+            {{info.talents[0].glyphcs.minor}}
+            {{info.talents[0].spec.name}}
+            {{info.talents[0].spec.description}}
+            <div ng-repeat="talent in info.talents[0].talents">
+              {{talent.spell.name}}
+              {{talent.spell.id}}
+              {{talent.spell.description}}
+              {{talent.spell.casTtime}}
+              {{talent.spell.cooldown}}
+            </div>
+          </tab>
+          <tab heading="Second">
+            {{info.talents[1].glyphs.major}}
+            {{info.talents[1].glyphcs.minor}}
+            {{info.talents[1].spec.name}}
+            {{info.talents[1].spec.description}}
+            <div ng-repeat="talent in info.talents[1].talents">
+              {{talent.spell.name}}
+              {{talent.spell.id}}
+              {{talent.spell.description}}
+              {{talent.spell.casTtime}}
+              {{talent.spell.cooldown}}
+            </div>
+          </tab>
+        </tabset>
       </div>
       <div class="row" ng-controller="TabsController">
         <tabset>
