@@ -2,7 +2,7 @@
 
 var services = angular.module('wow.services.guild', []);
 
-services.factory('Character', ['$http', function($http) {
+services.factory('Guild', ['$http', function($http) {
   function load(path) {
     var request = $http({
       method: 'GET',
