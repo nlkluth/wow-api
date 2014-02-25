@@ -9,8 +9,6 @@ controllers.controller('CharacterController', ['$scope', '$stateParams', 'Charac
       realm: $stateParams.realm
     };
 
-    console.log($stateParams);
-
     Character.info($scope.character.realm, $scope.character.name).then(function(result) {
       console.log(result.data);
       $scope.info = result.data;
