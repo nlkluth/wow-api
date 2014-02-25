@@ -51,4 +51,9 @@ select {
   background: #eaebae;
 }
 
+.raid {
+  padding: 10px 0;
+  border-bottom: 1px solid #2e2e2e;
+}
+
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
