@@ -1,3 +1,30 @@
 <div ng-controller="GuildController">
-  <h3>{{name}}</h3>
+  <div class="row">
+  <div class="col-xs-2 sidebar">
+      <ul class="nav nav-sidebar">
+        <li class="active" ui-sref="guild">Overview</li>
+        <li ui-sref="guild.achievements">Achievements</li>
+        <li ui-sref="guild.challenge">Challenge</li>
+        <li ui-sref="guild.news">News</li>
+      </ul>
+    </div>
+    <div class="col-xs-8 main">
+      <h3>{{name}}</h3>
+      <h4>{{info.level}}</h4>
+      {{info.emblem}}
+      {{info.achievementPoints}}
+      <div ui-view>
+        <div class="row" ng-repeat="member in info.members">
+          <div class="col-xs-1">{{member.rank}}</div>
+          <div class="col-xs-1">{{member.character.level}}</div>
+          <div class="col-xs-1">{{member.character.gender}}</div>
+          <div class="col-xs-1">{{member.character.race}}</div>
+          <div class="col-xs-1">{{member.character.class}}</div>
+          <div class="col-xs-3">{{member.character.name}}</div>
+          <div class="col-xs-2">{{member.character.spec.name}}</div>
+          <div class="col-xs-1">{{member.character.achievementPoints}}</div>
+          </div>
+        </div>
+    </div>
+  </div>
 </div>

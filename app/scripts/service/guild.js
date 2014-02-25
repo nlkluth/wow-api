@@ -17,7 +17,7 @@ services.factory('Guild', ['$http', function($http) {
 
   return {
     info: function(realm, name) {
-      return load('/api/guild/' + realm + '/' + name);
+      return load('/api/guild/' + realm + '/' + name + '?fields=members,achievements,news,challenge');
     }
   };
 }]);

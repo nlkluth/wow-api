@@ -73,6 +73,18 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         url: '/guild/:realm/:name',
         templateUrl: 'views/guild.html'
       })
+      .state('guild.achievements', {
+        url: '/achievements',
+        templateUrl: 'views/partials/guild/achievements.html'
+      })
+      .state('guild.challenge', {
+        url: '/challenge',
+        templateUrl: 'views/partials/guild/challenge.html'
+      })
+      .state('guild.news', {
+        url: '/news',
+        templateUrl: 'views/partials/guild/news.html'
+      })
       .state('404', {
         url: '/404',
         templateUrl: '404.html'
