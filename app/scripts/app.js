@@ -69,6 +69,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         url: '/talents',
         templateUrl: 'views/partials/character/talents.html'
       })
+      .state('guild', {
+        url: '/guild/:realm/:name',
+        templateUrl: 'views/guild.html'
+      })
       .state('404', {
         url: '/404',
         templateUrl: '404.html'
