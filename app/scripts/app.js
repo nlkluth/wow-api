@@ -85,6 +85,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         url: '/news',
         templateUrl: 'views/partials/guild/news.html'
       })
+      .state('quest', {
+        url: '/quest/:id',
+        templateUrl: 'views/quest.html'
+      })
       .state('404', {
         url: '/404',
         templateUrl: '404.html'

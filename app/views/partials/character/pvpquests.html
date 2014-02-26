@@ -21,7 +21,7 @@
     <tab heading="Quets">
       <h3> quests </h3>
       <div ng-repeat="quest in info.quests">
-        <div class="col-xs-1">{{quest}}</div>
+        <div class="col-xs-1"><a ng-href="#/quest/{{quest}}">{{quest}}</a></div>
       </div>
     </tab>
   </tabset>
