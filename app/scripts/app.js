@@ -14,7 +14,8 @@ var app = angular.module('wow', [
   'wow.controller.pvp',
   'wow.controller.character',
   'wow.controller.tabs',
-  'wow.controller.guild'
+  'wow.controller.guild',
+  'wow.controller.quest'
 ]);
 
 app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
