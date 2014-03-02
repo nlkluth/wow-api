@@ -1,3 +1,17 @@
 <div ng-controller="ItemController">
-  {{info}}
+  <h4>{{info.name}}</h4>
+  <div class="row">
+    <div class="col-xs-4">{{info.allowableClasses}}</div>
+    <div class="col-xs-4">{{info.armor}}</div>
+    <div class="col-xs-4">{{info.baseArmor}}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4">
+      <div ng-repeat="stat in info.bonusStats">
+        {{stat.amount}}
+        {{stat.stat}}
+      </div>
+    </div>
+    <div class="col-xs-4">{{info.buyprice}}</div>
+  </div>
 </div>
