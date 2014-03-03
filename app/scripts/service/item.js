@@ -18,6 +18,9 @@ services.factory('Item', ['$http', function($http) {
   return {
     info: function(id) {
       return load('/api/item/' + id);
+    },
+    setinfo: function(id) {
+      return load('api/item/set/' + id);
     }
   };
 }]);
