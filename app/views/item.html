@@ -6,23 +6,30 @@
         {{class}}
       </div>
     </div>
+    <div class="col-xs-4">Armor: {{info.armor}}</div>
+    <div class="col-xs-4">Base Armor: {{info.baseArmor}}</div>
   </div>
   <div class="row">
     <div class="col-xs-4">
       <div ng-repeat="stat in info.bonusStats">
-        {{stat.amount}}
         {{stat.stat}}
+        {{stat.amount}}
       </div>
     </div>
-    <div class="col-xs-4">{{info.buyprice}}</div>
+    <div class="col-xs-4">Price {{info.buyPrice}}</div>
   </div>
-
-  <a ng-href="{{info.itemSet.id}}">{{info.itemSet.name}}</a>
-  {{info.nameDescription}}
-  {{info.requiredLevel}}
-  {{info.sellPrice}}
-  {{info.socketInfo.socketBonus}}
-  <div ng-repeat="socket in info.socketInfo.sockets">
-    {{type}}
+  <div class="row">
+   <div class="col-xs-3"><a ng-href="{{info.itemSet.id}}">{{info.itemSet.name}}</a></div>
+   <div class="col-xs-3">{{info.nameDescription}}</div>
+   <div class="col-xs-3">Level: {{info.requiredLevel}}</div>
+   <div class="col-xs-3">Sell Price: {{info.sellPrice}}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Socket Bonus {{info.socketInfo.socketBonus}}</div>
+    <div class="col-xs-3">
+      <div ng-repeat="socket in info.socketInfo.sockets">
+        {{$index + 1}} {{socket.type}}
+      </div>
+    </div>
   </div>
 </div>
