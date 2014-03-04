@@ -96,7 +96,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         url: '/item/:id',
         templateUrl: 'views/item.html'
       })
-      .state('item.set', {
+      .state('set', {
         url: '/item/set/:id',
         templateUrl: 'views/itemset.html'
       })
