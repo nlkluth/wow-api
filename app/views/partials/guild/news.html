@@ -1,1 +1,12 @@
-  {{info.news}}
+<div ng-repeat="item in info.news" class="row list">
+  <div class="row">
+    <div class="col-xs-4">{{item.type}}</div>
+    <div class="col-xs-4">{{item.character}}</div>
+    <div class="col-xs-2">{{item.timestamp}}</div>
+    <div class="col-xs-2">{{item.itemId}}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4">{{item.achievement.title}}</div>
+    <div class="col-xs-8">{{item.achievement.description}}</div>
+  </div>
+</div>
