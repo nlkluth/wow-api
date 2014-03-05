@@ -15,14 +15,16 @@
       {{info.achievementPoints}}
       <div ui-view>
         <div class="row" ng-repeat="member in info.members">
-          <div class="col-xs-1">{{member.rank}}</div>
-          <div class="col-xs-1">{{member.character.level}}</div>
-          <div class="col-xs-1">{{member.character.gender}}</div>
-          <div class="col-xs-1">{{member.character.race}}</div>
-          <div class="col-xs-1">{{member.character.class}}</div>
-          <div class="col-xs-3">{{member.character.name}}</div>
-          <div class="col-xs-2">{{member.character.spec.name}}</div>
-          <div class="col-xs-1">{{member.character.achievementPoints}}</div>
+          <a href="#/character/{{member.character.realm}}/{{member.character.name}}">
+            <div class="col-xs-1">{{member.rank}}</div>
+            <div class="col-xs-1">{{member.character.level}}</div>
+            <div class="col-xs-1">{{member.character.gender}}</div>
+            <div class="col-xs-1">{{member.character.race}}</div>
+            <div class="col-xs-1">{{member.character.class}}</div>
+            <div class="col-xs-3">{{member.character.name}}</div>
+            <div class="col-xs-2">{{member.character.spec.name}}</div>
+            <div class="col-xs-1">{{member.character.achievementPoints}}</div>
+          </a>
           </div>
         </div>
     </div>
