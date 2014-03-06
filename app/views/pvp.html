@@ -1,5 +1,11 @@
 <div class="container" ng-controller="PvPController">
   <h1> PvP </h1>
+
+  <form class="row">
+    <input type="text" ng-model="search" placeholder="Search" class="col-xs-3">
+    <div ng-include="'views/partials/searchsizelimit.html'" class="col-xs-3"></div>
+  </form>
+
   <div class="row">
     <div class="col-xs-1">Rank</div>
     <div class="col-xs-1">Rating</div>
@@ -14,14 +20,14 @@
     <div class="col-xs-1">Weekly Loss</div>
   </div>
 
-  <div ng-repeat="character in leaderboard">
+  <div ng-repeat="character in leaderboard | filter:search | filter:strictsearch:true | limitTo:searchsize.limit">
     <div class="row list">
       <a ng-href="#/character/{{character.realmName}}/{{character.name}}">
         <div class="col-xs-1">{{character.ranking}}</div>
         <div class="col-xs-1">{{character.rating}}</div>
         <div class="col-xs-1">{{character.name}}</div>
         <div class="col-xs-1">{{character.realmName}}</div>
-        <div class="col-xs-1">{{character.raceId}} {{character.classId}} {{character.genderId}}</div>
+        <div class="col-xs-1">{{character.raceId|race}} {{character.classId|class}} {{character.genderId|gender}}</div>
         <div class="col-xs-1">{{character.specId}}</div>
         <div class="col-xs-1">{{character.factionId}}</div>
         <div class="col-xs-1">{{character.seasonWins}}</div>
