@@ -17,7 +17,10 @@ var app = angular.module('wow', [
   'wow.controller.guild',
   'wow.controller.quest',
   'wow.controller.item',
-  'wow.controller.itemset'
+  'wow.controller.itemset',
+  'wow.filters.gender',
+  'wow.filters.class',
+  'wow.filters.race'
 ]);
 
 app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
