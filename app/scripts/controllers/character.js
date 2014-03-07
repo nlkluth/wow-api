@@ -10,7 +10,6 @@ controllers.controller('CharacterController', ['$scope', '$stateParams', 'Charac
     };
 
     Character.info($scope.character.realm, $scope.character.name).then(function(result) {
-      console.log(result.data);
       $scope.info = result.data;
     }, function(error) {
       console.log(error, 'error');
