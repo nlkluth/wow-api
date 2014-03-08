@@ -1,7 +1,7 @@
 'use strict';
 
-var debug = require('debug')('shim:item'),
-  request = require('../request');
+var debug = require('debug')('shim:item');
+var request = require('../request');
 
 exports.detail = function(req, res) {
   debug('requesting item detail');

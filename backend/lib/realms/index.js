@@ -1,7 +1,7 @@
 'use strict';
 
-var debug = require('debug')('shim:realms'),
-  request = require('../request');
+var debug = require('debug')('shim:realms');
+var request = require('../request');
 
 exports.list = function(req, res) {
   debug('requesting list'); //TODO: cache servers list

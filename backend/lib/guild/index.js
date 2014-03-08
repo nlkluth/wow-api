@@ -1,7 +1,7 @@
 'use strict';
 
-var debug = require('debug')('shim:guild'),
-  request = require('../request');
+var debug = require('debug')('shim:guild');
+var request = require('../request');
 
 exports.detail = function(req, res) {
   debug('requesting guild detail');

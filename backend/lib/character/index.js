@@ -1,7 +1,7 @@
 'use strict';
 
-var debug = require('debug')('shim:character'),
-  request = require('../request');
+var debug = require('debug')('shim:character');
+var request = require('../request');
 
 exports.list = function(req, res) {
   debug('requesting list');
