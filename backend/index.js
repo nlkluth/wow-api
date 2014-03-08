@@ -4,7 +4,7 @@ var api = express();
 var db = require('./database');
 
 var port = process.env.PORT || 3000;
-db;
+db.init();
 
 /** Configuration **/
 
