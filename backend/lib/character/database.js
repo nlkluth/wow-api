@@ -23,7 +23,6 @@ exports.newCharacter = function(name) {
   });
 
   return promise;
-
 };
 
 exports.getAllCharacters = function() {
@@ -36,5 +35,6 @@ exports.getAllCharacters = function() {
       resolve(characters);
     });
   });
+
   return promise;
 };
