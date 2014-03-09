@@ -19,6 +19,7 @@ var realms = require('./lib/realms'),
 api.get('/api/realms', realms.list);
 api.get('/api/pvp/:bracket', character.list);
 api.get('/api/character/:realm/:name', character.detail);
+api.get('/api/new/:name', character.create);
 api.get('/api/guild/:realm/:name', guild.detail);
 api.get('/api/quest/:id', quest.detail);
 api.get('/api/item/:itemId', item.detail);
