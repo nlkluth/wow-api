@@ -39,3 +39,12 @@ exports.create = function(req, res) {
     res.status(400).json({status: 'something went wrong'});
   });
 };
+
+exports.findAll = function(req, res) {
+  debug('findAll');
+  character.getAllCharacters().then(function(list) {
+    res.json({characters: list});
+  }).catch(function() {
+    res.stats(400).json({status: 'something went wrong'});
+  });
+};
