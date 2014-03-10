@@ -52,7 +52,7 @@ exports.getProfileById = function(id) {
   return promise;
 };
 
-exports.updateProfileById = function() {
+exports.updateProfileById = function(id) {
   var promise = new Promise(function(resolve, reject) {
     Character.findByIdAndUpdate(id, function(err, character) {
       if (err) {
@@ -65,7 +65,7 @@ exports.updateProfileById = function() {
   return promise;
 };
 
-exports.destroyProfile = function() {
+exports.destroyProfile = function(id) {
   var promise = new Promise(function(resolve, reject) {
     Character.findByIdAndRemove(id, function(err, character) {
       if (err) {
