@@ -40,12 +40,16 @@ exports.findAll = function(req, res) {
 
 exports.findById = function(req, res) {
   var id = req.params.id;
-  res.json({status: 'ok', id: id});
+  character.getProfileById(id).then(function(profile) {
+    res.json(profile);
+  }).catch(function() {
+    res.status(400).json({status: 'something went wrong'});
+  });
 };
 
 exports.create = function(req, res) {
   debug('name', req.params.name);
-  character.newCharacter(req.params.name).then(function(name) {
+  character.newProfile(req.params.name).then(function(name) {
     res.json({name: name});
     debug('fulfilled', name);
   }).catch(function() {
@@ -55,10 +59,18 @@ exports.create = function(req, res) {
 
 exports.update = function(req, res) {
   var id = req.params.id;
-  res.json({status: 'ok', id: id});
+  character.updateProfileById(id).then(function(profile) {
+    res.json(profile);
+  }).catch(function() {
+    res.status(400).json({status: 'something went wrong'});
+  });
 };
 
 exports.destroy = function(req, res) {
   var id = req.params.id;
-  res.json({status: 'ok', id: id});
+  character.destroyProfile(id).then(function(profile) {
+    res.json(profile);
+  }).catch(function() {
+    res.status(400).json({status: 'something went wrong'});
+  });
 };
