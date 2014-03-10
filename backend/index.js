@@ -24,8 +24,9 @@ api.get('/api/quest/:id', quest.detail);
 api.get('/api/item/:itemId', item.detail);
 
 api.get('/api/profiles', character.findAll);
+api.get('/api/profiles/:id', character.findById);
 api.post('/api/profiles/:name', character.create);
-api.post('/api/profiles/:id', character.update);
+api.put('/api/profiles/:id', character.update);
 api.delete('/api/profiles/:id', character.destroy);
 
 api.listen(port);
