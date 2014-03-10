@@ -38,3 +38,15 @@ exports.getAllProfiles = function() {
 
   return promise;
 };
+
+exports.getProfileById = function() {
+
+};
+
+exports.updateProfileById = function() {
+
+};
+
+exports.destroyProfile = function() {
+
+};
