@@ -9,7 +9,7 @@ var characterSchema = mongoose.Schema({
 });
 var Character = mongoose.model('Character', characterSchema);
 
-exports.newCharacter = function(name) {
+exports.newProfile = function(name) {
   debug('creating character');
   var newCharacter = new Character({name: name});
 
@@ -25,7 +25,7 @@ exports.newCharacter = function(name) {
   return promise;
 };
 
-exports.getAllCharacters = function() {
+exports.getAllProfiles = function() {
   var promise = new Promise(function(resolve, reject) {
     Character.find(function (err, characters) {
       if (err) {
