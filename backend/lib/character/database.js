@@ -32,21 +32,48 @@ exports.getAllProfiles = function() {
         return reject(err);
       }
       debug('character', characters);
-      resolve(characters);
+      return resolve(characters);
     });
   });
 
   return promise;
 };
 
-exports.getProfileById = function() {
+exports.getProfileById = function(id) {
+  var promise = new Promise(function(resolve, reject) {
+    Character.findById(id, function(err, character) {
+      if (err) {
+        return reject(err);
+      }
+      return resolve(character);
+    });
+  });
 
+  return promise;
 };
 
 exports.updateProfileById = function() {
+  var promise = new Promise(function(resolve, reject) {
+    Character.findByIdAndUpdate(id, function(err, character) {
+      if (err) {
+        return reject(err);
+      }
+      return resolve(character);
+    });
+  });
 
+  return promise;
 };
 
 exports.destroyProfile = function() {
+  var promise = new Promise(function(resolve, reject) {
+    Character.findByIdAndRemove(id, function(err, character) {
+      if (err) {
+        return reject(err);
+      }
+      return resolve(character);
+    });
+  });
 
+  return promise;
 };
