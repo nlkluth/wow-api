@@ -30,6 +30,20 @@ exports.detail = function(req, res) { //TODO: dry it up
   });
 };
 
+exports.findAll = function(req, res) {
+  debug('findAll');
+  character.getAllCharacters().then(function(list) {
+    res.json({characters: list});
+  }).catch(function() {
+    res.stats(400).json({status: 'something went wrong'});
+  });
+};
+
+exports.findById = function(req, res) {
+  var id = req.params.id;
+  res.json({status: 'ok', id: id});
+};
+
 exports.create = function(req, res) {
   debug('name', req.params.name);
   character.newCharacter(req.params.name).then(function(name) {
@@ -40,11 +54,12 @@ exports.create = function(req, res) {
   });
 };
 
-exports.findAll = function(req, res) {
-  debug('findAll');
-  character.getAllCharacters().then(function(list) {
-    res.json({characters: list});
-  }).catch(function() {
-    res.stats(400).json({status: 'something went wrong'});
-  });
+exports.update = function(req, res) {
+  var id = req.params.id;
+  res.json({status: 'ok', id: id});
+};
+
+exports.destroy = function(req, res) {
+  var id = req.params.id;
+  res.json({status: 'ok', id: id});
 };
