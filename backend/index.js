@@ -23,8 +23,10 @@ api.get('/api/guild/:realm/:name', guild.detail);
 api.get('/api/quest/:id', quest.detail);
 api.get('/api/item/:itemId', item.detail);
 
-api.post('/api/profile/:name', character.create);
-api.get('/api/profile', character.findAll);
+api.get('/api/profiles', character.findAll);
+api.post('/api/profiles/:name', character.create);
+api.post('/api/profiles/:id', character.update);
+api.delete('/api/profiles/:id', character.destroy);
 
 api.listen(port);
 debug('Listening on %d', port);
