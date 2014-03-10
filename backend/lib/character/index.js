@@ -31,8 +31,7 @@ exports.detail = function(req, res) { //TODO: dry it up
 };
 
 exports.findAll = function(req, res) {
-  debug('findAll');
-  character.getAllCharacters().then(function(list) {
+  character.getAllProfiles().then(function(list) {
     res.json({characters: list});
   }).catch(function() {
     res.stats(400).json({status: 'something went wrong'});
