@@ -1,2 +1,8 @@
-profile
-<div ui-view>List</div>
+<div ng-controller="ProfileController">
+  <h3>Profile</h3>
+  <div ui-view>
+    <div ng-repeat="character in profile.characters">
+      {{character.name}}
+    </div>
+  </div>
+</div>
