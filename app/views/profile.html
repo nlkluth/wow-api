@@ -2,7 +2,7 @@
   <h3>Profile</h3>
   <div ui-view>
     <div ng-repeat="character in profile.characters">
-      {{character.name}}
+      <a ui-sref="profile.detail">{{character.name}}<div><a>
     </div>
   </div>
 </div>
