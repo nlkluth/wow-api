@@ -82,6 +82,14 @@ config.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider,
       url: '/item/set/:id',
       templateUrl: 'views/itemset.html'
     })
+    .state('profile', {
+      url: '/profile',
+      templateUrl: 'views/profile.html'
+    })
+    .state('profile.detail', {
+      url: '/detail',
+      templateUrl: 'views/profiledetail.html'
+    })
     .state('404', {
       url: '/404',
       templateUrl: '404.html'
