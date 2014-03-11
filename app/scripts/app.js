@@ -19,6 +19,7 @@ var app = angular.module('wow', [
   'wow.controller.quest',
   'wow.controller.item',
   'wow.controller.itemset',
+  'wow.controller.profile',
   'wow.filters.gender',
   'wow.filters.class',
   'wow.filters.race'
