@@ -86,8 +86,8 @@ config.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider,
       url: '/profile',
       templateUrl: 'views/profile.html'
     })
-    .state('profile.detail', {
-      url: '/detail',
+    .state('profile detail', {
+      url: '/profile/:name',
       templateUrl: 'views/profiledetail.html'
     })
     .state('404', {
