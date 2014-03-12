@@ -18,6 +18,9 @@ services.factory('Profile', ['$http', function($http) {
   return {
     list: function() {
       return load('/api/profiles');
+    },
+    detail: function(id) {
+      return load('/api/profiles/' + id);
     }
   };
 }]);
